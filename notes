@@ -1,0 +1,10 @@
+docker-compose build --- it will create the image
+docker-compose up --- it will up the containers
+docker-compose down --- it will stop the containers
+
+
+docker images -- to see the created images
+docker ps -- to see the running containers
+
+
+docker exec -it laravel-docker bash ---bash

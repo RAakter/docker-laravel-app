@@ -14,7 +14,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: docker_laravel
     ports:
-      - 3306:3306
+      - 3310:3310
 
   phpmyadmin:
     image: phpmyadmin:latest
