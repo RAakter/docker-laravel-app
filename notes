@@ -8,3 +8,21 @@ docker ps -- to see the running containers
 
 
 docker exec -it laravel-docker bash ---bash
+
+# build specific image
+docker build -t your-image-name .
+docker run -it -p 9000:80 your-image-name
+
+
+# write permission to storage
+docker exec -it your-container-name chown -R www-data:www-data /var/www/html/storage
+docker exec -it your-container-name chmod -R 775 /var/www/html/storage
+
+# cache clear
+docker exec -it your-container-name php artisan cache:clear
+docker exec -it your-container-name php artisan config:clear
+docker exec -it your-container-name php artisan route:clear
+
+# npm run
+docker exec -it your-container-name npm run build
+
